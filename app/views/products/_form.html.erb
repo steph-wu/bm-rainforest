@@ -2,6 +2,20 @@
 
   <%= form_for product do |f| %>
 
+  <% if product.errors.any? %>
+    <hr>
+    <div id="error_explanation">
+      <p><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</p>
+
+      <ul>
+        <% product.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+    <hr>
+  <% end %>
+
     <p>
       <%= f.label :name %>
       <%= f.text_field :name %>

@@ -63,6 +63,11 @@ hr {
   margin: 15px auto;
 }
 
+#error_explanation ul {
+  margin-left: 25px;
+  font-size: 12px;
+}
+
 footer {
   width: 100%;
   padding: 10px;
