@@ -1,3 +1,7 @@
 <h3>PRODUCT LIST</h3>
 <hr>
+<div class="button_bar">
+  <%= link_to 'Add Product', new_product_path, class: "button" %>
+</div>
+<hr>
 <%= render @products %>
