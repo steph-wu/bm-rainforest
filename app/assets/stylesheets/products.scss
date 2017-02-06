@@ -1,0 +1,45 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.product {
+  display: block;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+.product:last-child {
+  margin-bottom: 60px;
+}
+
+.product img {
+  max-width: 50%;
+  height: auto;
+  float: left;
+  margin-right: 20px;
+}
+
+.product_info {
+  float: right;
+  width: 50%;
+}
+
+form p {
+  margin: 10px auto;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+.button_bar {
+  display: block;
+  margin: 20px auto;
+}
+
+.button {
+  border: 1px solid black;
+  padding: 5px;
+  text-transform: uppercase;
+}
