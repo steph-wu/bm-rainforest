@@ -68,6 +68,27 @@ hr {
   font-size: 12px;
 }
 
+#alert, #notice {
+  border: 1px solid black;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.button_bar {
+  display: block;
+  margin: 20px auto;
+}
+
+.button {
+  border: 1px solid black;
+  padding: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+}
+
 footer {
   width: 100%;
   padding: 10px;

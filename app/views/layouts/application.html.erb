@@ -11,11 +11,19 @@
 <header><%= link_to 'KLEI ENTERTAINMENT STORE', products_path %></header>
 
 <main>
+
+  <% if flash[:notice] %>
+    <p id="notice"><%= flash[:notice] %></p><br />
+  <% end %>
+  <% if flash[:alert] %>
+    <p id="alert"><%= flash[:alert] %></p><br />
+  <% end %>
+
   <%= yield %>
 </main>
 
 <footer>
-  &copy; KLEI ENTERTAINMENT 
+  &copy; KLEI ENTERTAINMENT
 </footer>
 
 </body>
