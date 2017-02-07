@@ -89,6 +89,19 @@ hr {
   font-weight: bold;
 }
 
+.form {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.form textarea {
+  width: 40%;
+  resize: none;
+  border: 1px solid #CCC;
+  height: 120px;
+}
+
 .text_box {
   width: 100%;
   resize: none;
