@@ -21,8 +21,7 @@
 }
 
 html {
-  min-height: 100%;
-  position: relative;
+  height: 100%;
 }
 
 body {
@@ -90,6 +89,23 @@ hr {
   font-weight: bold;
 }
 
+.text_box {
+  width: 100%;
+  resize: none;
+  border: 1px solid black;
+  height: 125px;
+}
+
+.review {
+  border: 1px solid black;
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.review:last-child {
+  display: none;
+}
+
 footer {
   width: 100%;
   padding: 10px;
@@ -97,6 +113,4 @@ footer {
   text-align: center;
   background-color: black;
   color: white;
-  bottom: 0;
-  position: absolute;
 }

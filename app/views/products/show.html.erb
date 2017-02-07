@@ -4,3 +4,49 @@
 </div>
 <hr>
 <%= render @product %>
+
+<h3>REVIEWS</h3>
+
+<hr>
+
+<% if current_user %>
+  <h4>NEW REVIEW</h4><br />
+
+  <%= form_for([@product, @review]) do |f| %>
+    <% if @review.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@review.errors.count, "error") %> prohibited this review from being saved:</h2>
+
+        <ul>
+        <% @review.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.text_area :comment, class: "text_box" %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+
+<% else %>
+  <p>Please <%= link_to "log in", new_session_path %> to add a review.</p>
+<% end %>
+
+<hr>
+
+<% @product.reviews.each do |review| %>
+  <div class="review">
+    <p>
+      <% if review.user != nil %>
+        <span style="text-transform: uppercase; font-weight: bold;"> <%= review.user.email %></span><br />
+        <%= review.created_at.strftime("%Y-%m-%d") %>
+      <% end %>
+    </p>
+    <p><%= review.comment %></p>
+  </div>
+<% end %>
